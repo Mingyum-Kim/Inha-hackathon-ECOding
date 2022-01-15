@@ -11,7 +11,7 @@ public class Comment {
     private String contents;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "writer_id", foreignKey = @ForeignKey(name = "fk_baseboard_to_member"))
+    @JoinColumn(name = "board_id", foreignKey = @ForeignKey(name = "fk_baseboard_to_board"))
     protected Board board;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
