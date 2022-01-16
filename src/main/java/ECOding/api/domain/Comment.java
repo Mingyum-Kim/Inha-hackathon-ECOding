@@ -11,11 +11,11 @@ public class Comment {
     private String contents;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "board_id", foreignKey = @ForeignKey(name = "fk_baseboard_to_member"))
+    @JoinColumn(name = "board_id", foreignKey = @ForeignKey(name = "fk_comment_to_board"))
     protected Board board;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "member_id", foreignKey = @ForeignKey(name = "fk_baseboard_to_member"))
+    @JoinColumn(name = "member_id", foreignKey = @ForeignKey(name = "fk_comment_to_member"))
     protected Member member;
 
     private LocalDateTime createdAt;
