@@ -14,12 +14,8 @@ public class Board {
     private String contents;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "writer_id", foreignKey = @ForeignKey(name = "fk_baseboard_to_member"))
-    protected Member writer;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "board_id", foreignKey = @ForeignKey(name = "fk_baseboard_to_board"))
-    private Board board;
+    @JoinColumn(name = "member_id", foreignKey = @ForeignKey(name = "fk_baseboard_to_member"))
+    protected Member member;
 
     private LocalDateTime createdAt;
 
