@@ -11,6 +11,7 @@ import java.util.List;
 
 @Slf4j
 @RestController
+@RequestMapping("/member")
 @RequiredArgsConstructor
 public class MemberController {
 
@@ -31,7 +32,7 @@ public class MemberController {
     }
 
     // 회원 전체 조회
-    @GetMapping
+    @GetMapping("/all")
     public List<Member> findMembers(){
         return memberService.findMembers();
     }

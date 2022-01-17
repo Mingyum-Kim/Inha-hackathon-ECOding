@@ -1,10 +1,17 @@
 package ECOding.api.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "board")
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Board {
     @Id @GeneratedValue
     private Long id;
@@ -14,15 +21,20 @@ public class Board {
     private String contents;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "writer_id", foreignKey = @ForeignKey(name = "fk_baseboard_to_member"))
-    protected Member writer;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "board_id", foreignKey = @ForeignKey(name = "fk_baseboard_to_board"))
-    private Board board;
+    @JoinColumn(name = "member_id", foreignKey = @ForeignKey(name = "member_id"))
+    protected Member member;
 
     private LocalDateTime createdAt;
 
     private LocalDateTime updatedAt;
+
+    public void setMember(Member member){
+        this.member = member;
+    }
+
+    public Board(String title, String contents) {
+        this.title = title;
+        this.contents = contents;
+    }
 }
 
