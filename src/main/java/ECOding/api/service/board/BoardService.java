@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface BoardService {
     // 게시글 생성
-     Optional<Board> save(Board board);
+     Board saveBoard(Board board);
 
     // 게시글 단일 조회
      Optional<Board> findBoard(Long id);
@@ -17,7 +17,7 @@ public interface BoardService {
      List<Board> findBoards();
 
     // 게시글 수정
-     Optional<Board> updateBoard(Board board);
+    Board updateBoard(Board board);
 
     // 게시글 삭제
     void delete (Long id);

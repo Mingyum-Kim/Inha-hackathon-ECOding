@@ -25,28 +25,27 @@ public class BoardServiceImpl implements BoardService
     }
 
     @Override
-    public Optional<Board> save(Board board) {
-//        return boardRepository.save(board).get();
-        return Optional.empty();
+    public Board saveBoard(Board board) {
+        return boardRepository.save(board);
     }
 
     @Override
     public Optional<Board> findBoard(Long id) {
-        return Optional.empty();
+        return boardRepository.findById(id);
     }
 
     @Override
     public List<Board> findBoards() {
-        return null;
+        return boardRepository.findAll();
     }
 
     @Override
-    public Optional<Board> updateBoard(Board board) {
-        return Optional.empty();
+    public Board updateBoard(Board board) {
+        return boardRepository.save(board);
     }
 
     @Override
     public void delete(Long id) {
-
+        boardRepository.deleteById(id);
     }
 }
