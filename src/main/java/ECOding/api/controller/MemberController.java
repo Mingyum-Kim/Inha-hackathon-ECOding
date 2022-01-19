@@ -1,7 +1,6 @@
 package ECOding.api.controller;
 
 import ECOding.api.domain.Member;
-import ECOding.api.repository.MemberRepository;
 import ECOding.api.service.member.MemberService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

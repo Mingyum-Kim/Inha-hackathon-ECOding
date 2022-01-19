@@ -1,7 +1,7 @@
 package ECOding.api.service.member;
 
 import ECOding.api.domain.Member;
-import ECOding.api.repository.MemberRepository;
+import ECOding.api.domain.MemberRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +17,11 @@ public class MemberServiceImpl implements MemberService{
 
     MemberRepository memberRepository;
 
+    @Autowired
+    public MemberServiceImpl(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+
     @Override
     public Optional<Member> join(Member member) {
         return Optional.of(memberRepository.save(member));
@@ -29,7 +34,7 @@ public class MemberServiceImpl implements MemberService{
 
     @Override
     public Optional<Member> findMember(Long id) {
-        return Optional.of(memberRepository.findById(id));
+        return memberRepository.findById(id);
     }
 
     @Override
