@@ -4,10 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +21,10 @@ public class Member {
     private String name;
 
     private String nickname;
+
+    // insert시 따로 값을 입력하지 말 것. 혹은 0으로 세팅할 것
+    @Column(columnDefinition = "integer default 0")
+    private Integer mileage;
 
     public Member(String loginId, String name, String nickname) {
         this.loginId = loginId;

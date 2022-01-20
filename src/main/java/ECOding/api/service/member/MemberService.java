@@ -18,4 +18,8 @@ public interface MemberService {
 
     // 회원 수정
      Optional<Member> update(Member member);
+
+     // 회원의 마일리지 증가
+    Integer addMileage(Long id);
+
 }
