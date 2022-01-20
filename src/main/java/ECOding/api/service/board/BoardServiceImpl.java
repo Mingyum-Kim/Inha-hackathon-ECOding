@@ -2,7 +2,7 @@ package ECOding.api.service.board;
 
 import ECOding.api.domain.Board;
 import ECOding.api.domain.BoardRepository;
-import ECOding.api.repository.MemberRepository;
+import ECOding.api.domain.MemberRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,33 +20,33 @@ public class BoardServiceImpl implements BoardService
     private MemberRepository memberRepository;
 
     @Autowired
-    public BoardServiceImpl(BoardRepository boardRepository){
+    public BoardServiceImpl(BoardRepository boardRepository, MemberRepository memberRepository) {
         this.boardRepository = boardRepository;
+        this.memberRepository = memberRepository;
     }
 
     @Override
-    public Optional<Board> save(Board board) {
-//        return boardRepository.save(board).get();
-        return Optional.empty();
+    public Board saveBoard(Board board) {
+        return boardRepository.save(board);
     }
 
     @Override
     public Optional<Board> findBoard(Long id) {
-        return Optional.empty();
+        return boardRepository.findById(id);
     }
 
     @Override
     public List<Board> findBoards() {
-        return null;
+        return boardRepository.findAll();
     }
 
     @Override
-    public Optional<Board> updateBoard(Board board) {
-        return Optional.empty();
+    public Board updateBoard(Board board) {
+        return boardRepository.save(board);
     }
 
     @Override
     public void delete(Long id) {
-
+        boardRepository.deleteById(id);
     }
 }

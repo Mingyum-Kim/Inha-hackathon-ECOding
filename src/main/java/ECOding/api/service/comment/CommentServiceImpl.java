@@ -1,7 +1,6 @@
 package ECOding.api.service.comment;
 
 import ECOding.api.domain.*;
-import ECOding.api.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
@@ -27,7 +26,7 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public Optional<Comment> write(Comment comment, Long boardId, Long memberId) {
-        Member memberItem = memberRepository.findById(memberId);
+        Member memberItem = memberRepository.findById(memberId).get();
         comment.setMember(memberItem);
 
         Optional<Board> boardItem = boardRepository.findById(boardId);
