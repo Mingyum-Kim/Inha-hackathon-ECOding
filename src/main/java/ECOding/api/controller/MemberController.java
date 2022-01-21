@@ -25,7 +25,7 @@ public class MemberController {
 
     // 회원 수정
     @ResponseBody
-    @PutMapping()
+    @PutMapping
     public Member update(@RequestBody Member member){
         return memberService.update(member).get();
     }
@@ -40,6 +40,12 @@ public class MemberController {
     @GetMapping
     public Member findMember(@RequestParam Long id){
         return memberService.findMember(id).get();
+    }
+
+    // 회원의 마일리지 증가
+    @GetMapping("/mileage")
+    public Integer addMileage(@RequestParam Long id){
+        return memberService.addMileage(id);
     }
 }
 

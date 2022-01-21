@@ -16,7 +16,6 @@ import java.util.Optional;
 public class MemberServiceImpl implements MemberService{
 
     MemberRepository memberRepository;
-
     @Autowired
     public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
@@ -43,7 +42,15 @@ public class MemberServiceImpl implements MemberService{
                 Optional.of(memberRepository.save(member)) : Optional.empty();
     }
 
+    @Override
+    public Integer addMileage(Long id){
+        Member member = memberRepository.findById(id).get();
+        member.setMileage(member.getMileage() + 1);
+        return member.getMileage();
+    }
+
     private boolean DoesExistMember(Member member) {
         return Optional.of(memberRepository.findById(member.getId())).isPresent();
     }
+
 }
