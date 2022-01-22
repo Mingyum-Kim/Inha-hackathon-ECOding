@@ -43,4 +43,9 @@ public class BoardController {
     public void deleteBoard(@RequestParam Long boardId){
         boardService.delete(boardId);
     }
+
+    @GetMapping("bookMark")
+    public void bookMarkingBoard(@RequestParam Long boardId, @RequestBody Long memberId){
+        boardService.addBookMark(boardId, memberId);
+    }
 }

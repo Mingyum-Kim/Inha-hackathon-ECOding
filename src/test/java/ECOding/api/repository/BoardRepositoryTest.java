@@ -2,7 +2,6 @@ package ECOding.api.repository;
 
 import ECOding.api.domain.Board;
 import ECOding.api.domain.BoardRepository;
-import ECOding.api.domain.Member;
 import ECOding.api.domain.MemberRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
