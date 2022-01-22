@@ -22,4 +22,5 @@ public interface BoardService {
     // 게시글 삭제
     void delete (Long id);
 
+    void addBookMark(Long boardId, Long memberId);
 }

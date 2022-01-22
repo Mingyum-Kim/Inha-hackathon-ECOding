@@ -28,8 +28,12 @@ public class Member {
     @Column(columnDefinition = "integer default 0")
     private Integer mileage;
 
-    public Member(String loginId, String name, String nickname) {
+    @ElementCollection
+    private List<Long> bookMarkId;
+
+    public Member(String loginId, String password, String name, String nickname) {
         this.loginId = loginId;
+        this.password = password;
         this.name = name;
         this.nickname = nickname;
     }
