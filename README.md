@@ -107,3 +107,19 @@
         member.get().getBookMarkId().add(boardId);
     }
 ```
+
+
+
+## 🎇Back-End 팀 역할 배분
+
+👩‍💻 김민겸
+- ERD 설계
+- Member와 Board API 설계
+- 앱 팀 엔지니어링 위키, 회의록 관리
+- GitHub Code Flow 관리
+
+
+👩‍💻 윤효정
+- Comments API 설계
+- Naver Cloud 서버 생성 및 관리
+
