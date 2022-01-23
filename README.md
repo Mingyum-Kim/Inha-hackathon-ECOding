@@ -19,7 +19,7 @@
 남수진|12191754|정보통신공학과|AI팀 : 데이터셋, 코드 서칭, 라벨링, 코드 주석 달기<br>Front-end팀 : php로 서버연동, 레이아웃 수정, 인트로 화면/메인 화면/상점 기능 구현<br>README.MD 파일 작성
 김민겸|12201863|정보통신공학과|앱개발 팀장 : 앱팀 엔지니어링 위키, 회의록 관리<br>Back-end팀 : ERD 설계, Member와 Board API설계, Github code flow 관리<br>ppt 제작, README.MD 파일 작성
 윤효정|12171662|컴퓨터공학과|Back-end팀 : Comments API 설계 Naver Cloud 서버 생성 및 관리<br>README.MD 파일 작성
-이슬|12201931|컴퓨터공학과|Front-end팀 : 로그인&회원가입 / 카메라 기능 구현, 딥러닝 모델 연결, 분리수거 리스트/ 북마크 / 마이페이지 / 내가 쓴 글 activity 및 layout 구현<br>ppt 제작
+이슬|12201931|정보통신공학과|Front-end팀 : 로그인&회원가입 / 카메라 기능 구현, 딥러닝 모델 연결, 분리수거 리스트/ 북마크 / 마이페이지 / 내가 쓴 글 activity 및 layout 구현<br>ppt 제작
 김민서|12171729|컴퓨터공학과|Front-end팀 : 로그인&회원가입 / 메뉴바 기능 구현, QnA 게시판 구현
 
 ### 협업 방법
